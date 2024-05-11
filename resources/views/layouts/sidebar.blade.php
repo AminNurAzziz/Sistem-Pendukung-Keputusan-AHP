@@ -5,7 +5,7 @@
     <ul class="navbar-nav bg-gradient-green sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('pesticides.dashboard') }}">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
@@ -38,7 +38,7 @@
         </div>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('pesticides.dashboard') }}">
+            <a class="nav-link collapsed" href="{{ route('history') }}">
                 <i class="fas fa-fw fa-history"></i>
                 <span>History Users</span>
             </a>
@@ -106,6 +106,12 @@
                             <span>Calculate Alternatif</span>
                         </a>                        
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href={{ route('history.latest') }} >
+                            <i class="fas fa-fw fa-receipt"></i>
+                            <span>Rank (Latest)</span>
+                        </a>                        
+                    </li>
                 @endif
 
                 @if($userLogin->role == 'user')
@@ -137,7 +143,7 @@
         <div id="content">
 
             <!-- Topbar -->
-            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+            <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
 
                 <!-- Sidebar Toggle (Topbar) -->
                 <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
